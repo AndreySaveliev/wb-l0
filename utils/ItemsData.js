@@ -1,10 +1,14 @@
+import tshirt from '../assets/tshirt.png'
+import phoneCase from '../assets/case.png'
+import pencils from '../assets/pencils.png'
+
 export const itemsData = [
   {
     name: 'Футболка UZcotton мужская',
     specs: ['Цвет: белый', 'Размер: 56'],
     seller: 'Коледино WB',
     org: 'OOO Вайлдберриз',
-    img: './assets/tshirt.png',
+    img: tshirt,
     currentQuantity: 1,
     maxQuantity: 2,
     priveWithOutSale: 1051,
@@ -18,7 +22,7 @@ export const itemsData = [
     specs: ['Цвет: прозрачный'],
     seller: 'Коледино WB',
     org: 'OOO Вайлдберриз',
-    img: './assets/case.png',
+    img: phoneCase,
     currentQuantity: 200,
     maxQuantity: null,
     priveWithOutSale: 11500,
@@ -32,7 +36,7 @@ export const itemsData = [
     specs: [],
     seller: 'Коледино WB',
     org: 'OOO Вайлдберриз',
-    img: './assets/pencils.png',
+    img: pencils,
     currentQuantity: 2,
     maxQuantity: 2,
     priveWithOutSale: 475,
