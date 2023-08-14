@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товыры и точка</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__menu-containe">
+        <img class="header__menu" src="./assets/Vector.svg" />
+        <h1 class="header__title">Товары и точка</h1>
+      </div>
+      <div class="header__input-container">
+        <input class="header__input" />
+        <button class="header__search-button"></button>
+      </div>
+      <div class="header__buttons-container">
+        <div class="header__button-container">
+          <img src="./assets/user.svg" />
+          <p class="header__button-text">Профиль</p>
+        </div>
+        <div class="header__button-container">
+          <img src="./assets/bin.svg" />
+          <p class="header__button-text">Корзина</p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="bin">
+        <h2 class="bin__title">Корзина</h2>
+        <div class="bin__buttons">
+          <div class="bin__button bin__button_checkbox">
+            <input type="checkbox" class="button__select-all" checked />
+            <span class="button-span__select-all"></span>
+            <span class="bin__button-text">Выбрать все</span>
+          </div>
+          <div class="bin__button bin__button_switcher">
+            <input type="checkbox" class="button__hide-all" />
+            <span class="button-span__hide-all"></span>
+          </div>
+        </div>
+        <div class="bin__items">
+          <template id="item">
+            <div class="bin__item">
+              <div class="item__full-info">
+                <div class="item__button bin__button_checkbox">
+                  <input type="checkbox" class="button__select-one" checked />
+                  <span class="button-span__select-one"></span>
+                </div>
+                <img class="item__img" alt="item img" src="./assets/tshirt.png" />
+                <div class="item__info">
+                  <p class="item__name">Футболка UZcotton мужская</p>
+                  <div class="item__specs">
+                    <p class="item__spec"></p>
+                    <p class="item__spec"></p>
+                  </div>
+                  <div class="item__seller-info">
+                    <p class="seller__text seller__name"></p>
+                    <p class="seller__text seller__company"></p>
+                  </div>
+                </div>
+                <div class="item__buttons-container">
+                  <div class="item__buttons_quantity">
+                    <button
+                      class="item__button_quantity item__button_decrease item__button_quantity_unactive"
+                    >
+                      -
+                    </button>
+                    <p class="item__quantity">1</p>
+                    <button class="item__button_quantity item__button_increase">+</button>
+                  </div>
+                  <p class="item__quantity-last"></p>
+                  <div class="item__button item__buttons_edit">
+                    <button class="item__button_like"></button>
+                    <button class="item__button_delete"></button>
+                  </div>
+                </div>
+                <div class="item__price">
+                  <p class="item__price_current"></p>
+                  <p class="item__price_prev"></p>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section class="missing-items-section">
+        <div class="missing-items">
+          <div class="bin__buttons">
+            <p class="bin__items-missing">Отсутствуют · 3 товара</p>
+            <div class="bin__button bin__button_switcher">
+              <input type="checkbox" class="button__hide-all button__hide-all-missing" />
+              <span class="button-span__hide-all"></span>
+            </div>
+          </div>
+          <div class="missing-items-container">
+            <template id="missing">
+              <div class="bin__item bin__item_missing">
+                <div class="item__full-info missing-grid">
+                  <img class="item__img" alt="item img" src="./assets/tshirt.png" />
+                  <div class="item__info">
+                    <p class="item__name">Футболка UZcotton мужская</p>
+                    <div class="item__specs">
+                      <p class="item__spec">Цвет: белый</p>
+                      <p class="item__spec">Размер: 56</p>
+                    </div>
+                  </div>
+                  <div class="item__buttons-container missing-grid_buttons">
+                    <div
+                      class="item__button item__buttons_edit item__buttons_edit-missing missing-grid_buttons"
+                    >
+                      <button class="item__button_like"></button>
+                      <button class="item__button_delete"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <section class="shipment-method">
+        <h2 class="shipment__title">Способ доставки</h2>
+        <div class="shipment__information">
+          <p class="shipment__text">Пункт выдачи</p>
+          <div class="point__data">
+            <p class="point__adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <div class="point__additon-data">
+              <p class="point__raiting"><img src="./assets/star.svg" alt="star" />4.99</p>
+              <p class="point__hours">Ежедневно с 10 до 21</p>
+            </div>
+          </div>
+          <p class="price__text">Стоимость доставки</p>
+          <p class="price__price">Бесплатно</p>
+          <p class="price__date">5—6 февраля</p>
+          <div class="sipmnet__items-date sipmnet__items-date_frist">
+            <template id="missign-item">
+              <div class="shipmnet__item">
+                <img class="shipment__item-img" src="./assets/case.png" alt="tshirt" />
+                <p class="shipment__item-quantite"></p>
+              </div>
+            </template>
+              <!-- <div class="shipmnet__item">
+                <img class="shipment__item-img" src="./assets/tshirt.png" alt="tshirt" />
+              </div>
+              <div class="shipmnet__item">
+                <img class="shipment__item-img" src="./assets/pencils.png" alt="tshirt" />
+                <p class="shipment__item-quantite">2</p>
+              </div>
+          </div> -->
+          <!-- <p class="price__date price__date_nomargin">7—8 февраля</p>
+            <div class="sipmnet__items-date">
+              <div class="shipmnet__item">
+                <img class="shipment__item-img" src="./assets/case.png" alt="tshirt" />
+                <p class="shipment__item-quantite">16</p>
+              </div>
+            </div> -->
+        </div>
+        <p class="price__date">7—8 февраля</p>
+        <div class="sipmnet__items-date sipmnet__items-date_second">
+
+        </div>
+        <button class="shipment__edit-button">Изменить</button>
+        <div class="shipment__return">
+          <img class="shipment__icon" src="./assets/priceshipping.svg" />
+          <p class="shipment__return-text">
+            Обратная доставка товаров на склад при отказе —
+            <span class="shipment__span">бесплатно</span>
+          </p>
+        </div>
+      </section>
+      <section class="payment-method">
+        <h2 class="payment__title">Способ оплаты</h2>
+        <div class="payment__card">
+          <img class="payment__card-icon" src="./assets/mir.svg" />
+          <p class="payment__card-number">1234 56•• •••• 1234</p>
+          <p class="payment__card-date">01/30</p>
+        </div>
+        <p class="payment__rules">Спишем оплату с карты при получении</p>
+        <button class="shipment__edit-button">Изменить</button>
+      </section>
+      <section class="recipient">
+        <h2 class="recipient__title">Получатель</h2>
+        <div class="recipient__inputs">
+          <div class="input-container input-container_name">
+            <p class="input__error input__error_name input__error_active"></p>
+            <input
+              required
+              type="text"
+              class="recipient__input recipient__input_name"
+              placeholder="Имя"
+              required
+            />
+            <span class="input__span">Имя</span>
+          </div>
+          <div class="input-container input-container_sername">
+            <p class="input__error input__error_sername input__error_active"></p>
+            <input
+              required
+              type="text"
+              class="recipient__input recipient__input_sername"
+              placeholder="Фамилия"
+            />
+            <span class="input__span">Фамилия</span>
+          </div>
+        </div>
+        <div class="recipient__inputs recipient__inputs_second">
+          <div class="input-container input-container_email">
+            <p class="input__error input__error_email input__error_active"></p>
+            <input
+              required
+              type="text"
+              class="recipient__input recipient__input_email"
+              placeholder="Почта"
+              pattern="[a-zA-Z0-9\-\.]+[\@][a-zA-Z0-9\-]+[\.][a-zA-Z0-9\.]{2,}"
+            />
+            <span class="input__span">Почта</span>
+          </div>
+          <div class="input-container input-container_phone">
+            <p class="input__error input__error_phone input__error_active"></p>
+            <input
+              required
+              type="text"
+              class="recipient__input recipient__input_phone"
+              placeholder="Номер телефона"
+              pattern="^[\d\s]+"
+              maxlength="30"
+            />
+            <span class="input__span">Телефон</span>
+          </div>
+          <div class="input-container input-container_relative input-container_inn">
+            <p class="input__error input__error_inn">Для таможенного оформления</p>
+            <input
+              required
+              type="text"
+              class="recipient__input recipient__input_inn"
+              placeholder="ИНН"
+              pattern="\d{14}"
+              minlength="14"
+              maxlength="14"
+            />
+            <span class="input__span">ИНН</span>
+          </div>
+        </div>
+      </section>
+      <section class="receipt">
+        <div class="receipt__info">
+          <div class="receipt__point receipt__total">
+            <p class="receipt__text receipt__text_bold">Итого</p>
+            <p class="receipt__text receipt__text_bold receipt__price">
+              2 101 063<span> сом</span>
+            </p>
+          </div>
+          <div class="receipt__point receipt__quantity">
+            <p class="receipt__text receipt__count">203 товара</p>
+            <p class="receipt__text receipt__total_sale"></p>
+          </div>
+          <div class="receipt__point">
+            <p class="receipt__text">Скидка</p>
+            <p class="receipt__text receipt__sale"></p>
+          </div>
+          <div class="receipt__point receipt__ship">
+            <p class="receipt__text">Доставка</p>
+            <p class="receipt__text">Бесплатно</p>
+          </div>
+        </div>
+        <div class="receipt__shipment">
+          <p class="shipmnet__text">Доставка в пункт выдачи</p>
+          <p class="receipt__text_smal">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+          <p class="receipt__text_red">5–8 фев</p>
+          <img class="receipt__edit" src="./assets/icon-20.svg" />
+          <div class="receipt__return">
+            <img class="shipment__icon" src="./assets/priceshipping.svg" />
+            <p class="shipment__return-text">
+              Обратная доставка товаров на склад при отказе —
+              <span class="shipment__span">бесплатно</span>
+            </p>
+          </div>
+        </div>
+        <div class="receipt__card-info">
+          <h2 class="receipt__title">Оплата картой</h2>
+          <div class="receipt__card">
+            <img class="payment__card-icon" src="./assets/mir.svg" />
+            <p class="payment__card-number">1234 56•• •••• 1234</p>
+          </div>
+          <img class="receipt__edit" src="./assets/icon-20.svg" />
+        </div>
+        <div class="payment__option">
+          <div class="payment__option-box">
+            <div class="item__button bin__button_checkbox">
+              <input type="checkbox" class="payment__checkbox" checked />
+              <span class="button-span__select-one payment__span"></span>
+            </div>
+            <p class="payment__option-text">Списать оплату сразу</p>
+          </div>
+          <p class="payment__option-text">Спишем оплату с карты при получении</p>
+        </div>
+        <div class="receipt__button-contaner">
+          <button class="receipt__order">Заказать</button>
+          <div class="receipt__rules">
+            <img src="./assets/Frame 277132151.svg" />
+            <p class="receipt__rules-text">
+              Соглашаюсь с правилами пользования торговой площадкой и возврата
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 ООО «Товары и точка»</p>
+    </footer>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
